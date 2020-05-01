@@ -1,0 +1,10 @@
+main {
+  padding: 16px;
+  margin-top: 300px;
+  height: 1500px;
+}
+
+.fix-bottom {
+  position: fixed;
+  bottom: 0;
+}

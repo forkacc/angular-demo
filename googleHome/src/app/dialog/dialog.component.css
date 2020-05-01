@@ -1,0 +1,44 @@
+/*html,*/
+/*body {*/
+/*  height: 100%;*/
+/*}*/
+
+/*.container {*/
+/*  height: 100%;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+
+.modal {
+  display: none;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.view-modal {
+  z-index: 1;
+  background-color: #91dc98;
+  border: 1px solid #6fb498;
+  width: 60%;
+  height: 100%;
+  padding: 10px;
+
+  /*display: block;*/
+  margin: auto;
+
+  /*position: absolute;*/
+  /*left: 50%;*/
+  /*top: 50%;*/
+  /*transform: translate(-50%, -50%)*/
+}
+
+/*.view-modal {*/
+/*  z-index: 1;*/
+/*  text-align: center;*/
+/*  display: block;*/
+/*  background-color: #91dc98;*/
+/*  border: 1px solid #6fb498;*/
+/*  width: 60%;*/
+/*  height: 100%;*/
+/*  padding: 10px;*/
+/*}*/

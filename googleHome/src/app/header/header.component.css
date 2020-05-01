@@ -1,0 +1,29 @@
+.header {
+  background: #91dc98;
+  position: fixed;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.p {
+  display: none;
+  font-size: xx-large;
+  color: #ff7878;
+}
+
+@media screen and (max-width: 600px) {
+  .input {
+    background: #628eb4;
+    display: none;
+  }
+  .p {
+    display: block;
+    font-size: xx-large;
+    color: #ff7878;
+  }
+  .responsive {
+    display: block;
+  }
+}
