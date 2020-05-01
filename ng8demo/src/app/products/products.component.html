@@ -1,0 +1,26 @@
+<h2>Products</h2>
+<div class="products-container">
+  <section class="products-filter-section">
+    <h5>Filter by price</h5>
+    <p>
+      Min: <input type="number" [(ngModel)]="min">
+    </p>
+    <p>
+      Max: <input type="number" [(ngModel)]="max">
+    </p>
+    <button (click)="addProduct()">Add Product</button>
+    <p>Products: {{products.length}}</p>
+    <br>
+    <h5>Filter by name</h5>
+    <p>
+      Contain: <input type="text" [(ngModel)]="name">
+    </p>
+  </section>
+  <section class="products-list-section">
+    <div class="products-list-container">
+      <app-product-overview
+        *ngFor="let product of (products | priceRange: min: max | nameFilter: name)" [product]="product">
+      </app-product-overview>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,29 @@
+<hr>
+<p>Two way data binding</p>
+<p>
+  <input type="checkbox" [(ngModel)]="toggle"> Check for test Attribute binding!
+</p>
+
+<div *ngIf="toggle">
+  <hr>
+  <p> *ngFor</p>
+  <p *ngFor="let path of paths"><span>{{path}}</span></p>
+  <hr>
+  <p>Attribute binding</p>
+  <img [src]="path" alt="Fail!" width="100" height="200">
+  <hr>
+  <p>One way data binding:</p>
+  <p>Path: {{path}}</p>
+</div>
+
+<div *ngIf="toggle">
+  <hr>
+  <p>Event binding</p>
+  <button (click)="switchImg()">Click to switch photos</button>
+</div>
+
+<div>
+  <hr>
+  <p>Child -> Parent</p>
+  <button (click)="addImg()">Click to add a path</button>
+</div>

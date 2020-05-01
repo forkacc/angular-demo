@@ -1,0 +1,28 @@
+.product-detail-image {
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  min-height: 400px;
+}
+.product-detail-title h1 {
+  font-family: "Google Sans",sans-serif;
+  font-size: 1.57em;
+  font-weight: 400;
+  margin-bottom: 8px;
+  line-height: 1.72em;
+}
+.product-detail-info-container {
+  border-left: 1px solid #eee;
+}
+.product-detail-container {
+  margin-top: 30px;
+}
+.product-detail-info-price {
+  font-size: 2em;
+  font-weight: 500;
+  font-family: "Google Sans",sans-serif;
+  color: rgba(0,0,0,0.87);
+}
+.product-detail-info-cart-button-container {
+  margin-top: 20px;
+}

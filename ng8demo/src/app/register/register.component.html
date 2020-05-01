@@ -1,0 +1,42 @@
+<div fxLayout fxLayoutAlign="center" style="margin: 50px 50px;">
+  <mat-card fxLayout="column" fxFlex="1 1 50%" fxFlex.lt-sm="1 1 auto">
+    <mat-card-title>Register</mat-card-title>
+    <!-- manually give angular control over this form -->
+    <form fxLayout="column" [formGroup]="registerFormGroup">
+      <mat-form-field>
+        <mat-placeholder>Username</mat-placeholder>
+<!--        <input type="text" matInput [formControl]="ufc">-->
+        <input type="text" matInput formControlName="username">
+        <!--
+        specify which is error msg displayed
+                 -->
+        <mat-error *ngIf="registerFormGroup.get('username').getError('minlength')">Username has to be no less than 3 character long.</mat-error>
+        <mat-error *ngIf="registerFormGroup.get('username').getError('email')">Username has to be in email format.</mat-error>
+      </mat-form-field>
+      <!-- find common accestor of nested formGroup and assign here       -->
+      <div fxLayout="column" formGroupName="passwordGroup">
+        <mat-form-field>
+          <mat-placeholder>Password</mat-placeholder>
+<!--          <input type="password" matInput [formControl]="pfc">-->
+          <input type="password" matInput formControlName="password">
+          <mat-error>Password is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-placeholder>Confirm Password</mat-placeholder>
+<!--          <input type="password" matInput [formControl]="cpfc">-->
+          <input type="password" matInput formControlName="confirmPassword">
+        </mat-form-field>
+        <mat-error *ngIf="registerFormGroup.get('passwordGroup').getError('passwordsNotMatch')">
+          {{registerFormGroup.get('passwordGroup').getError('passwordsNotMatch')}}
+        </mat-error>
+      </div>
+      <p>
+        <button type="submit" mat-raised-button color="primary">Register</button>
+      </p>
+    </form>
+    <p>
+      <!-- get form instance value in json format  -->
+      {{registerFormGroup.value | json}}
+    </p>
+  </mat-card>
+</div>

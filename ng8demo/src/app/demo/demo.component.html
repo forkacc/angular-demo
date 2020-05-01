@@ -1,0 +1,14 @@
+<h3>
+  Total: {{total}}
+</h3>
+
+<!-- $event -> implicit variable: automatically declared by angular -->
+<app-display-data [data]="books" (updateTotalEvent)="update($event)"></app-display-data>
+<!-- left side: a variable from display-data component to take right side the fruits from demo component -->
+
+<br>
+<br>
+<br>
+<hr>
+<app-display-data [data]="fruits" (updateTotalEvent)="update($event)"></app-display-data>
+

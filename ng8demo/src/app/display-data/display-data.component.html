@@ -1,0 +1,42 @@
+<p>Count: {{count}}</p>
+<p>
+  <button (click)="increase()">Increase</button>
+  <button (click)="send()">Send</button>
+</p>
+
+<hr>
+<h3>Display Data - {{name}}</h3>
+<p>
+  Input name: <input type="text" [(ngModel)]="name">
+</p>
+
+
+<hr>
+<p>
+<!--  attribute binding -->
+  <a target="_blank" [href]="myLink">Unknown Link</a>
+</p>
+<p>
+<!--  make above to have href link to either of the site -->
+<!--  event binding -->
+  <button (click)="updateMyLink('https://www.google.com')">Google</button>
+  <button (click)="updateMyLink('https://www.baidu.com')">Baidu</button>
+</p>
+
+
+<hr>
+<p>
+  <input type="checkbox" [(ngModel)]="flag"> Hide Contents
+</p>
+<p *ngIf="flag">
+  Some contents
+</p>
+
+
+<hr>
+<ul>
+  <!--  For evey element in data array, generate a `li` -->
+  <li *ngFor="let elem of data">
+    {{elem}}
+  </li>
+</ul>

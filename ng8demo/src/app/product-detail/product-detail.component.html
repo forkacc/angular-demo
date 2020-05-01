@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row product-detail-container">
+    <div class="col-sm-9">
+      <div class="product-detail-title">
+        <h1>{{product.name}}</h1>
+      </div>
+      <div class="product-detail-image-container text-center">
+        <img src="{{product.image}}" class="product-detail-image">
+      </div>
+    </div>
+    <div class="col-sm-3 product-detail-info-container">
+      <div class="product-detail-info-price">
+        <!-- put product.price through currency pip to get a currency format as a string dfor better display.-->
+        {{product.price | currency:'CNY'}}
+      </div>
+      <div class="product-detail-info-brand">
+        Sold by {{product.brand | uppercase | reverse}}
+      </div>
+      <div class="product-detail-info-cart-button-container">
+        <span>
+          <button class="btn btn-block btn-primary">ADD TO CART</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

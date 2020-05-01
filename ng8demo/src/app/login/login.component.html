@@ -1,0 +1,20 @@
+<main class="container" style="margin-top: 10px;">
+  <mat-card fxFlex="100%" fxFlex.gt-xs="60%" fxFlexOffset.gt-sm="20%">
+    <mat-card-title>Login</mat-card-title>
+      <!-- #: create a variable referring to ngForm    -->
+    <form fxLayout="column" ngForm #f="ngForm" (ngSubmit)="submit(f)">
+      <mat-form-field>
+        <input matInput type="text" name="username" placeholder="Username" ngModel required>
+        <mat-error>Username can't be empty.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" name="password" minlength="6" ngModel required>
+        <mat-error>Password has to be no less than 6 character long.</mat-error>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button color="primary" type="submit">Login</button> &nbsp;
+        <a mat-icon-button color="accent" routerLink="/register">Register</a> &nbsp;
+      </div>
+    </form>
+  </mat-card>
+</main>
